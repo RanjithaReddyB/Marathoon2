@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="http://mpc.com/sdpt/kittyhawk/2012/01/01/IBEXTransaction" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="http://mpc.com/endeavour/InventoryReceiptShipment" name="InventoryReceiptShipment_Async_Out" targetNamespace="http://mpc.com/endeavour/InventoryReceiptShipment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_InventoryReceiptShipment_Async_Out" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://schemas.microsoft.com/2003/10/Serialization/" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="guid">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://mpc.com/sdpt/kittyhawk/2012/01/01/IBEXTransaction" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" targetNamespace="http://mpc.com/sdpt/kittyhawk/2012/01/01/IBEXTransaction" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:element name="ArrayOfIBEXTransaction" nillable="true" type="p2:ArrayOfIBEXTransaction" />
+      <xsd:complexType name="ArrayOfIBEXTransaction">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="IBEXTransaction" nillable="true" type="p2:IBEXTransaction" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IBEXTransaction">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="Carrier" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="CntryCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="CoAbrv" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="Com" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="Company" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ControlCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="CreatedByUser" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="CrudeCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="CustNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="DataType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="DealNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="DealType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="DestState" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="Destination" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ExchContractNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ExchCustNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ExstarsTicketNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="FreightTerms" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="Gravity" type="xsd:double" />
+          <xsd:element minOccurs="0" form="qualified" name="GrossQty" type="xsd:double" />
+          <xsd:element minOccurs="0" form="qualified" name="GrossQtyGal" type="xsd:double" />
+          <xsd:element minOccurs="0" form="qualified" name="ID" type="ser:guid" />
+          <xsd:element minOccurs="0" form="qualified" name="InvoiceNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="IsPublished" type="xsd:boolean" />
+          <xsd:element minOccurs="0" form="qualified" name="IsSales" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="IsTransportation" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="LbsGalConv" type="xsd:double" />
+          <xsd:element minOccurs="0" form="qualified" name="MarathonOrderNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="MovementDocNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="MovementDocType" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="MovementTransNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="NetQty" type="xsd:double" />
+          <xsd:element minOccurs="0" form="qualified" name="NetQtyGal" type="xsd:double" />
+          <xsd:element minOccurs="0" form="qualified" name="Origin" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="PlBatch" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ProcessIdentifier" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RRCarTruck" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RecNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RecipeCode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RefLoc" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ReferenceCommodity" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RefineryBusMo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RptDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="RptLoc" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="SCAC" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ShipDate" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="ShipRcpt" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TankNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TermMeterNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TicketNo" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TimeIn" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TimeOut" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="Timestamp" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" form="qualified" name="TransOrigin" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TransportMode" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TransportRqst" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TypeCoUse" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="TypeLossGain" nillable="true" type="xsd:string" />
+          <xsd:element minOccurs="0" form="qualified" name="UMEA" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2.ArrayOfIBEXTransaction">
+    <wsdl:documentation />
+    <wsdl:part name="ArrayOfIBEXTransaction" element="p2:ArrayOfIBEXTransaction" />
+  </wsdl:message>
+  <wsdl:portType name="InventoryReceiptShipment_Async_Out">
+    <wsdl:documentation />
+    <wsdl:operation name="InventoryReceiptShipment_Async_Out">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_InventoryReceiptShipment_Async_Out" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p2.ArrayOfIBEXTransaction" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InventoryReceiptShipment_Async_OutBinding" type="p1:InventoryReceiptShipment_Async_Out">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="InventoryReceiptShipment_Async_Out">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventoryReceiptShipment_Async_OutService">
+    <wsdl:port name="HTTP_Port" binding="p1:InventoryReceiptShipment_Async_OutBinding">
+      <address location="http://sapci00xiq.mgroupnet.com:50000/XIAxisAdapter/MessageServlet?senderParty=&amp;senderService=Endeavour_SolarcRightAngle&amp;receiverParty=&amp;receiverService=&amp;interface=InventoryReceiptShipment_Async_Out&amp;interfaceNamespace=http%3A%2F%2Fmpc.com%2Fendeavour%2FInventoryReceiptShipment" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:InventoryReceiptShipment_Async_OutBinding">
+      <address location="https://sapci00xiq.mgroupnet.com:50001/XIAxisAdapter/MessageServlet?senderParty=&amp;senderService=Endeavour_SolarcRightAngle&amp;receiverParty=&amp;receiverService=&amp;interface=InventoryReceiptShipment_Async_Out&amp;interfaceNamespace=http%3A%2F%2Fmpc.com%2Fendeavour%2FInventoryReceiptShipment" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
