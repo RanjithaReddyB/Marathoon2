@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED8EDAD4-0696-4D39-B5B0-4E2EF8C6F328}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Marathon.Kittyhawk.Domain</RootNamespace>
+    <AssemblyName>Marathon.Kittyhawk.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\MdgContact.cs" />
+    <Compile Include="DTO\MdgCustomer.cs" />
+    <Compile Include="DTO\SalesForecast.cs" />
+    <Compile Include="DTO\SalesForecastSummary.cs" />
+    <Compile Include="Entities\Activity.cs" />
+    <Compile Include="Entities\AllocationManagerFilter.cs" />
+    <Compile Include="Entities\DeliveryPeriodCategory.cs" />
+    <Compile Include="Entities\DeliveryPeriodCategoryDetail.cs" />
+    <Compile Include="Entities\DynamicListBox.cs" />
+    <Compile Include="Entities\PriceService.cs" />
+    <Compile Include="Entities\Currency.cs" />
+    <Compile Include="Entities\HolidayCalendar.cs" />
+    <Compile Include="Entities\Commodity.cs" />
+    <Compile Include="Entities\HolidayCalendarDetail.cs" />
+    <Compile Include="Entities\MatchStatus.cs" />
+    <Compile Include="Entities\BulkTransferEntity.cs" />
+    <Compile Include="Entities\BulkTransfer.cs" />
+    <Compile Include="Entities\BulkTransferError.cs" />
+    <Compile Include="Entities\BulkTransferHistory.cs" />
+    <Compile Include="Entities\BusinessAssociate.cs" />
+    <Compile Include="Entities\Chemical.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Container.cs" />
+    <Compile Include="Entities\DataSource.cs" />
+    <Compile Include="Entities\DealObligation.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Constants.cs" />
+    <Compile Include="Entities\Error.cs" />
+    <Compile Include="Entities\IBEXTransactionEntity.cs" />
+    <Compile Include="Entities\IBEXTransaction.cs" />
+    <Compile Include="Entities\IBEXTransactionError.cs" />
+    <Compile Include="Entities\IBEXTransactionHistory.cs" />
+    <Compile Include="Entities\InventoryEntity.cs" />
+    <Compile Include="Entities\Inventory.cs" />
+    <Compile Include="Entities\InventoryError.cs" />
+    <Compile Include="Entities\InventoryHistory.cs" />
+    <Compile Include="Entities\InventoryTagGroup.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\AccountingTransaction.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InventorySubledger.cs" />
+    <Compile Include="Entities\InventoryReconcile.cs" />
+    <Compile Include="Entities\MonthEndInventory.cs" />
+    <Compile Include="Entities\Message.cs" />
+    <Compile Include="Entities\MovementTransactionValue.cs" />
+    <Compile Include="Entities\SalesForecast.cs" />
+    <Compile Include="Entities\SalesForecastEntity.cs" />
+    <Compile Include="Entities\SalesForecastError.cs" />
+    <Compile Include="Entities\SalesForecastHistory.cs" />
+    <Compile Include="Entities\OfficeAddress.cs" />
+    <Compile Include="Entities\TerritoryManager.cs" />
+    <Compile Include="Entities\TimeTransaction.cs" />
+    <Compile Include="Entities\MovementExpense.cs" />
+    <Compile Include="Entities\MovementTransaction.cs" />
+    <Compile Include="Entities\Movement.cs" />
+    <Compile Include="Entities\TransactionType.cs" />
+    <Compile Include="Entities\TransactionUpload.cs" />
+    <Compile Include="Entities\TransactionUploadEntity.cs" />
+    <Compile Include="Entities\TransactionUploadError.cs" />
+    <Compile Include="Entities\TransactionUploadHistory.cs" />
+    <Compile Include="Entities\TransferValue.cs" />
+    <Compile Include="Entities\Transfer.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\MovementPlan.cs" />
+    <Compile Include="Entities\PositionGroup.cs" />
+    <Compile Include="Entities\Deal.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\RefineryInventoryError.cs" />
+    <Compile Include="Entities\Transport.cs" />
+    <Compile Include="Entities\UnitofMeasure.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Helpers\AccountingTransactionKeys.cs" />
+    <Compile Include="Helpers\InventoryReconcileKeys.cs" />
+    <Compile Include="Helpers\MonthEndInventoryKeys.cs" />
+    <Compile Include="Helpers\InventorySubledgerKeys.cs" />
+    <Compile Include="Helpers\InvoiceKeys.cs" />
+    <Compile Include="Helpers\TimeTransactionKeys.cs" />
+    <Compile Include="Helpers\MovementExpenseKeys.cs" />
+    <Compile Include="Helpers\MovementTransactionKeys.cs" />
+    <Compile Include="Helpers\MovementTransactionValueKeys.cs" />
+    <Compile Include="Helpers\DealKeys.cs" />
+    <Compile Include="Helpers\DealObligationKeys.cs" />
+    <Compile Include="Helpers\MovementKeys.cs" />
+    <Compile Include="Helpers\OrderKeys.cs" />
+    <Compile Include="Helpers\TransferKeys.cs" />
+    <Compile Include="Helpers\TransferValueKeys.cs" />
+    <Compile Include="Interfaces\ICurrencyRepository.cs" />
+    <Compile Include="Interfaces\IDeliveryPeriodCategoryDetailRepository.cs" />
+    <Compile Include="Interfaces\IDeliveryPeriodCategoryRepository.cs" />
+    <Compile Include="Interfaces\IDynamicListBoxRepository.cs" />
+    <Compile Include="Interfaces\IHolidayCalendarRepository.cs" />
+    <Compile Include="Interfaces\ICommodityRepository.cs" />
+    <Compile Include="Interfaces\IHolidayCalendarDetailRepository.cs" />
+    <Compile Include="Interfaces\IAllocationManagerFilterRepository.cs" />
+    <Compile Include="Interfaces\IMatchStatusRepository.cs" />
+    <Compile Include="Interfaces\IChemicalRepository.cs" />
+    <Compile Include="Interfaces\IContactRepository.cs" />
+    <Compile Include="Interfaces\IDealObligationRepository.cs" />
+    <Compile Include="Interfaces\IMessageRepository.cs" />
+    <Compile Include="Interfaces\IActivityRepository.cs" />
+    <Compile Include="Interfaces\IBulkTransferHistoryRepository.cs" />
+    <Compile Include="Interfaces\IBulkTransferRepository.cs" />
+    <Compile Include="Interfaces\IBusinessAssociateRepository.cs" />
+    <Compile Include="Interfaces\IContainerRepository.cs" />
+    <Compile Include="Interfaces\IDataSourceRepository.cs" />
+    <Compile Include="Interfaces\IInventorySubledgerRepository.cs" />
+    <Compile Include="Interfaces\IInventoryReconcileRepository.cs" />
+    <Compile Include="Interfaces\IMonthEndInventoryRepository.cs" />
+    <Compile Include="Interfaces\IAccountingTransactionRepository.cs" />
+    <Compile Include="Interfaces\IInvoiceRepository.cs" />
+    <Compile Include="Interfaces\IMovementTransactionValueRepository.cs" />
+    <Compile Include="Interfaces\IPriceServiceRepository.cs" />
+    <Compile Include="Interfaces\ISalesForecastHistoryRepository.cs" />
+    <Compile Include="Interfaces\ISalesForecastRepository.cs" />
+    <Compile Include="Interfaces\IOfficeAddressRepository.cs" />
+    <Compile Include="Interfaces\ITerritoryManagerRepository.cs" />
+    <Compile Include="Interfaces\ITimeTransactionRepository.cs" />
+    <Compile Include="Interfaces\IMovementExpenseRepository.cs" />
+    <Compile Include="Interfaces\IMovementTransactionRepository.cs" />
+    <Compile Include="Interfaces\IMovementRepository.cs" />
+    <Compile Include="Interfaces\ITransactionTypeRepository.cs" />
+    <Compile Include="Interfaces\ITransactionUploadHistoryRepository.cs" />
+    <Compile Include="Interfaces\ITransactionUploadRepository.cs" />
+    <Compile Include="Interfaces\ITransferValueRepository.cs" />
+    <Compile Include="Interfaces\ITransferRepository.cs" />
+    <Compile Include="Interfaces\IOrderRepository.cs" />
+    <Compile Include="Interfaces\IMovementPlanRepository.cs" />
+    <Compile Include="Interfaces\IPositionGroupRepository.cs" />
+    <Compile Include="Interfaces\IErrorRepository.cs" />
+    <Compile Include="Interfaces\IIBEXTransactionHistoryRepository.cs" />
+    <Compile Include="Interfaces\IIBEXTransactionRepository.cs" />
+    <Compile Include="Interfaces\IInventoryHistoryRepository.cs" />
+    <Compile Include="Interfaces\IInventoryRepository.cs" />
+    <Compile Include="Interfaces\IInventoryTagGroupRepository.cs" />
+    <Compile Include="Interfaces\ILocationRepository.cs" />
+    <Compile Include="Interfaces\ILogRepository.cs" />
+    <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Interfaces\IRefineryInventoryErrorRepository.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ITransportRepository.cs" />
+    <Compile Include="Interfaces\IDealRepository.cs" />
+    <Compile Include="Interfaces\IUnitofMeasureRepository.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Interfaces\IVehicleRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BulkTransferValidator.cs" />
+    <Compile Include="Services\DateTimeConverter.cs" />
+    <Compile Include="Services\GuidGenerator.cs" />
+    <Compile Include="Services\HelperMethod.cs" />
+    <Compile Include="Services\IBEXTransactionValidator.cs" />
+    <Compile Include="Services\InventoryValidator.cs" />
+    <Compile Include="Services\Parser.cs" />
+    <Compile Include="Services\UnitOfMeasureConverter.cs" />
+    <Compile Include="Services\XmlConverter.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
